@@ -8,18 +8,14 @@ import { taskRouter } from "./routers/taskrouter";
 
 export const app = express();
 
-console.log(__dirname);
-
 const partialPath = path.join(__dirname, "../views/partials");
 
 hbs.registerPartials(partialPath);
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.json());
-// app.set("port", process.env.PORT);
-app.set("view engine", "hbs");
-
 app.use(userRouter);
 app.use(taskRouter);
+app.set("view engine", "hbs");
 
 app.get("/", (req: Request, res: Response) => {
   res.render("user", {
@@ -27,6 +23,7 @@ app.get("/", (req: Request, res: Response) => {
   });
 });
 
+//Test API
 app.patch("/userUpdateId/:id", async (req: Request, res: Response) => {
   const id = req.params.id;
   const queryParams = req.query;
