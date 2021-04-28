@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserPage</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    {{>header}}
+    <div>
+        <input type="text" placeholder="userName" id="name" required>
+    </div>
+    <div>
+        <input type="text" placeholder="userAge" id="age" required>
+    </div>
+    <div>
+        <input type="text" placeholder="password" id="pwd" required>
+    </div>
+    <div>
+        <p id="result"></p>
+        <p id="message"></p>
+    </div>
+
+    <hr>
+    <div>
+        <button id="submit">Submit</button>
+    </div>
+    <hr>
+
+    {{>footer}}
+    <script src="/js/userSave.js"></script>
+</body>
+</html>
