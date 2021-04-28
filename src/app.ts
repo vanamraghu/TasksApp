@@ -1,9 +1,8 @@
-import express, { NextFunction } from "express";
+import express from "express";
 import { Request, Response } from "express";
 import hbs from "hbs";
 import path from "path";
-import { UserDocument, userModel } from "./models/user";
-import { taskModel } from "./models/tasks";
+import { userModel } from "./models/user";
 import { userRouter } from "./routers/userrouter";
 import { taskRouter } from "./routers/taskrouter";
 

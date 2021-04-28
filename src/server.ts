@@ -1,8 +1,5 @@
 import { app } from "./app";
 import { mongoConnect } from "./db/mongoose";
-import bcryptjs from "bcryptjs";
-import jsonwebtoken from "jsonwebtoken";
-import { userModel, UserDocument } from "./models/user";
 
 app.listen(process.env.PORT, () => {
   console.log(process.env.PORT);

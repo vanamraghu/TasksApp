@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import { taskModel, TaskDocument } from "../models/tasks";
+import { taskModel } from "../models/tasks";
 import { passTokens } from "../middlewares/authMiddleware";
 export const taskRouter = express.Router();
 

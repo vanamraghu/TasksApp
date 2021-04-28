@@ -2,7 +2,7 @@ import mongoose, { Document, Model } from "mongoose";
 import validator from "validator";
 import bcryptjs from "bcryptjs";
 import jsonwebtoken from "jsonwebtoken";
-import { taskModel, TaskDocument, taskSchema } from "../models/tasks";
+
 export interface UserDocument extends Document {
   name: string;
   age: number;

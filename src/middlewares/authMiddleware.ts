@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import jsonwebtoken from "jsonwebtoken";
-import { UserDocument, userModel } from "../models/user";
+import { userModel } from "../models/user";
 
 export const passTokens = async (
   req: Request,
