@@ -8,7 +8,10 @@
     "cp-files": "ts-node staticFiles.ts",
     "build-local": "tsc -w",
     "server-local": "env-cmd -f ./src/config/dev.env nodemon dist/server.js -e js,ts,hbs",
-    "start-local": "concurrently \"npm run build-local \" \"npm run server-local \""
+    "start-local": "concurrently \"npm run build-local \" \"npm run server-local \"",
+    "build": "tsc",
+    "postinstall": "npm run build && npm run cp-files",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
