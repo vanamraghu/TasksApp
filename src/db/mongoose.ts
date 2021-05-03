@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose, { mongo } from "mongoose";
 
 export const mongoConnect = (url: string) => {
   mongoose
@@ -13,4 +13,9 @@ export const mongoConnect = (url: string) => {
     .catch(() => {
       console.log("DB connection failure");
     });
+};
+
+export const mongoDisconnect = async () => {
+  await mongoose.connection.dropDatabase();
+  await mongoose.connection.close();
 };

@@ -11,13 +11,11 @@ export const passTokens = async (
     if (req.header("Authorization")) {
       let token = req.header("Authorization") as string;
       token = token.replace("Bearer ", "");
-      console.log("current token is ", token);
       const data = await jsonwebtoken.verify(
         token,
         process.env.JWT_SECRET as string
       );
       const payload = data as DecodedToken;
-      console.log(typeof data, (data as DecodedToken).iat);
       const userDocument = await userModel.findOne({
         _id: payload._id,
         "tokens.token": token,
